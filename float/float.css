@@ -1,0 +1,11 @@
+div.float {
+    float: right;
+    width: 80px;
+    height: 80px;
+    background-color: teal;
+    text-align: center;
+}
+
+div:last-child {
+    background-color: tomato;
+}

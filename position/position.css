@@ -1,0 +1,44 @@
+body {
+    height: 1000px;
+}
+div div {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+div div:first-child {
+    background-color:rgb(221, 210, 107);
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    z-index: 1;
+}
+div div:last-child {
+    background-color: rgb(78, 174, 212);
+    position: relative;
+    bottom: 20px;
+    left: 40%;
+}
+div div:nth-child(2) {
+    background-color: green;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+} 
+div div:nth-child(3) {
+    background-color: rgb(3, 6, 146);
+    color: white;
+    position: sticky;
+    top: 5%;
+    left: 5%;
+} 
+
+.container {
+    background-color: rgba(241, 131, 131, 0.699);
+    width: 300px;
+    position: relative;
+    left: 30%;
+}
