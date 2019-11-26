@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+form {
+    background-color: rgb(196, 196, 196);
+    border-radius: 7px;
+    width: 60%;
+    padding: 0.5em;
+}
+input, select {
+    display: block;
+    margin: 0.5em;
+}
+input[type=text] {
+    width: 96%;
+    border-radius: 7px;
+    border-style: none;
+    border: 1px solid rgb(153, 153, 153);
+    padding: 1em 2em;
+}
+select {
+    width: 96%;
+    background-color: rgb(129, 129, 129);
+    color: rgb(40, 79, 151);
+    font-size: 1em;
+}
+
+
+input[type=submit] {
+    width: 96%;
+    background-color: rgb(76, 176, 81);
+    color: white;
+    font-size: 0.8em;
+    padding: 0.8em;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(32, 68, 33);
+}
+
