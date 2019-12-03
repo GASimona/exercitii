@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+img {
+    width: 15em;
+    display: inline-block;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(211, 211, 211);
+}
+
+/* ------------------header---- */
+
+header {
+    background-color: rgb(51, 51, 51);
+    color: rgb(192, 192, 192);
+    text-align: center;
+}
+
+header a {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+li {
+    display: inline-block;
+    padding: 20px;
+}
+
+/* ------------------- article ----- */
+
+article {
+    padding: 2em;
+    text-align: center;
+
+}
+h1 {
+    font-family: monospace;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+article div {
+    display: inline-block;
+    vertical-align: top;
+}
+article div p {
+    padding: 2em;
+}
+input[type="button"] {
+    text-transform: uppercase;
+    background-color: orange;
+    font-size: 1em;
+    padding: 0.3em 2em;
+    border-radius: 0.8em;
+    color: white;
+    margin-top: 3em;
+}
+
+/* --------------- footer ------ */
+
+footer {
+    background-color: rgb(51, 51, 51);
+    color: rgb(192, 192, 192);
+    text-align: center;
+}
