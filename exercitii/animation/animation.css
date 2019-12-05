@@ -1,0 +1,49 @@
+body {
+    background-color: dimgrey;
+}
+div {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 20%;
+    left: 20%;
+    background-color: darkgoldenrod;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 50%;
+
+
+
+}
+
+/* ------------------- animation ------------------- */
+div {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    /* animation-fill-mode: backwards; */
+}
+
+div:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        left: 0%;
+    }
+    50% {
+        top: 50%;
+        background-color: darkred;
+    }
+    to {
+        transform: rotate(360deg);
+        left: 60%;
+        background-color: rgb(37, 134, 134);
+    }
+}

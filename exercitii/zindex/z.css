@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(128, 128, 128);
+}
+div:first-child {
+    background-color: darkgoldenrod;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    /* opacity: 0.5; */
+}
+
+div:nth-child(2) {
+    background-color: darkred;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    /* z-index: -1; */
+}
+
+div:nth-child(3) {
+    position: relative;
+    margin-top: 30%;
+}
