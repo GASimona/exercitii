@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    font-family: sans-serif;
+}
+
+/* ---------- save color  --------- */
+body {
+    --my--color: rgb(203, 113, 48);
+    --color--p :rgb(85, 85, 85);
+}
+
+
+/* ------ header  ---------- */
+
+nav {
+    background-color: var(--my--color);
+    text-align: right;
+}
+
+li {
+    display: inline-block;
+    padding: 0.5em;
+}
+a {
+    text-decoration: none;
+    color: white;
+    /* font-size: 0.7em; */
+}
+
+li:first-child {
+    font-size: 1.2em;
+}
+
+/* -------- home ------------ */
+#home {
+    background-image: url(headerback.jpg);
+    height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+#overlay {
+    background-color: rgb(255, 255, 255, 0.7);
+    height: 100%;
+}
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 25%;
+    margin: auto;
+}
+
+h1 {
+    color: var(--my--color);
+    font-size: 2.3em;
+}
+
+#home p {
+    font-size: 1.3em;
+    color: var(--color--p);
+    font-family: "DIN Alternate";
+    width: 60%;
+    padding: 1em 0;
+}
+
+input[type="button"] {
+    background-color: var(--my--color);
+    color: white;
+    font-size: 1.4em;
+    padding: 0.3em;
+    border-style: none;
+    border-radius: 5px;
+}
