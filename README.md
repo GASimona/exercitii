@@ -1,1 +1,1 @@
-# exercitii
+# ex
