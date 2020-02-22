@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    height:400px;
+    width: 400px;
+}
+
+.grid div:nth-child(even) {
+    background-color: gainsboro;
+}
+
+.grid div:nth-child(odd) {
+    background-color: black;
+}
