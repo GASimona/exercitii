@@ -1,0 +1,9 @@
+.row div:first-child {
+    background-color: rgb(226, 134, 134);
+}
+.row div:nth-child(2) {
+    background-color: rgb(84, 84, 226);
+}
+.row div:last-child {
+    background-color: rgb(100, 197, 100);
+}
