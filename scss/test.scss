@@ -1,9 +1,28 @@
-$base-color: orange;
+@import 'var';
+
+$base-color: rgb(13, 23, 78);
+
+nav {
+    ul {
+        background-color: grey;
+        li {
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            font-size: 3em;
+            color: $secondary_color;
+            padding: $default_padding * 2 ;
+        }
+    }
+}
+
+
 
 button {
-    background-color: $color;
+    background-color: $base-color;
 }
 
 h1 {
-    color: $color;
+    color: $base-color;
 }
