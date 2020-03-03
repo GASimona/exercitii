@@ -1,0 +1,34 @@
+h1::before {
+    content: "xxx-";
+    color: rgb(94, 194, 70);
+}
+
+h1::after {
+    content: "-xxx";
+    color: rgb(94, 194, 70);
+}
+
+a {
+    text-decoration: none;
+    color: yellowgreen;
+    font-size: 1.3em;
+    font-family: Futura;
+}
+
+a:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: orange;
+    width: 0;
+
+    animation-name: grow;
+    animation-duration: 1s;
+    
+}
+
+@keyframes grow {
+    to {
+        width: 4em;
+    }
+}
