@@ -1,0 +1,8 @@
+body {
+    background-image:  url("earth.png"), url("space.jpg");
+    background-size: 20%, cover;
+    background-repeat: no-repeat, no-repeat;
+    height: 100vh;
+    background-position: center, center;
+
+}
