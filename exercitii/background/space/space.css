@@ -14,6 +14,6 @@ body {
 
 @keyframes warp {
     to { 
-        background-position: 30% 10%, center, -1024px center;
+        background-position: 30% 20%, center, -1024px center;
     }
 }
