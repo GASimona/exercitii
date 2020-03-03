@@ -45,6 +45,6 @@ body {
 
 @keyframes fountain {
     to {
-        background-position-y: 1000px;
+        background-position-y: 1050px;
     }
 }
