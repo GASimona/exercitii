@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+
+    background: rgb(83,19,101);
+    background: linear-gradient(180deg, rgba(83,19,101,1) 0%, rgba(104,16,115,1) 89%, rgba(41,2,44,1) 89%, rgba(61,5,65,1) 100%);
+
+    display: flex;
+    align-content: center;
+}
+
+
+/* ------------------ fence ------------------------ */
+.fence {
+    height: 100vh;
+    width: 1000vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vf1, .vf2, .vf3 {
+    width: 2.9em;
+    height: 2.9em;
+    background-color: white;
+    transform: rotate(45deg);
+    position: relative;
+    top: 1.5em;
+    left: 0.53em;
+}
+
+.wood1, .wood2, .wood3, .woodHorizontal  {
+    height: 100%;
+    width: 4em;
+
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(221,221,221,1) 28%, rgba(235,235,235,1) 30%, rgba(234,234,234,1) 37%, rgba(221,221,221,1) 41%, rgba(235,235,235,1) 49%, rgba(235,235,235,1) 51%);
+    position: relative;
+
+}
+
+.woodHorizontal {
+    position: relative;
+    height: 4%;
+    width: 100%;
+    top: -40%;
+    left: 4%;
+}
+
+.woodA, .woodB, .woodC {
+    height: 50%;
+    position: relative;
+    top: 5%;
+}
+
+.woodA {
+    left: -70%;
+    top: -16.5%;
+}
+
+.woodB {
+    left: -50%;
+    top: -16.5%;
+}
+
+.woodC {
+    left: -10%;
+    top: -16.5%;
+}
+
+/* ----------------- ghost --------------- */
+
+.ghost {
+    height: 400px;
+    width: 3000px;
+    background-color: white;
+    position: relative;
+    left: -40%;
+    top: 25%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+}
+
+
+.eyeL {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 40px;
+    position: relative;
+    top: 140px;
+    left: 50px;
+    
+}
+.eyeR {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 40px;
+    position: relative;
+    top: 100px;
+    left: 150px;
+}
+
+.eyeL, .eyeR {
+    background-position-y: 0;
+    animation-name: eyes;
+    animation-duration: 2s;
+
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+.mouth {
+    width: 30px;
+    height: 10px;
+    background-color: black;
+    border-radius: 40px;
+    position: relative;
+    top: 140px;
+    left: 100px;
+
+    background-position-y: 0;
+    animation-name: mouth;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-direction: alternate-reverse;
+    /* animation-play-state: paused; */
+}
+
+@keyframes mouth {
+    to {
+        height: 40px;
+    }
+}
+/* @keyframes eyes {
+    to {
+        height: 10px;
+    }
+} */
