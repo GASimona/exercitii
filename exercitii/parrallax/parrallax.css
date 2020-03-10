@@ -21,11 +21,23 @@
 .back {
     transform: translateZ(0px);
 }
+.back img {
+    height: 3000px;
+}
 .front {
      position: absolute;
      top: 50%;
      left: 20%;
      transform: translateZ(3px) scale(0.625);
+}
+.gear {
+    position: absolute;
+    top: 70%;
+    right: 30%;
+    transform: translateZ(4px) scale(0.5);
+}
+.gear img   {
+    width: 200px;
 }
 h1 {
     font-size: 50px;
