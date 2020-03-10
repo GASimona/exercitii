@@ -13,22 +13,20 @@ a {
     color: yellowgreen;
     font-size: 1.3em;
     font-family: Futura;
+    position: relative;
 }
 
-a:hover::after {
+a::after {
     content: "";
     display: block;
     height: 3px;
     background-color: orange;
-    width: 0;
-
-    animation-name: grow;
-    animation-duration: 1s;
-    
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    width: 100%;
+    position: absolute;
 }
 
-@keyframes grow {
-    to {
-        width: 4em;
-    }
+a:hover::after {
+    transform: scaleX(1);
 }

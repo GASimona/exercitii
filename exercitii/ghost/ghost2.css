@@ -6,23 +6,9 @@ body {
     background: rgb(83,19,101);
     background: linear-gradient(180deg, rgba(83,19,101,1) 0%, rgba(104,16,115,1) 89%, rgba(41,2,44,1) 89%, rgba(61,5,65,1) 100%);
 }
-body .container {
-    /* display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox; */
+body .container { 
     display: flex;
-    /* -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column; */
-    /* flex-direction: column; */
-    /* -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center; */
     justify-content: center;
-    /* -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center; */
     align-items: center;
 }
 

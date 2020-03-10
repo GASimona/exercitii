@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 8px;
+    perspective-origin: 50%;
+}
+
+
+.back {
+    transform: translateZ(0px);
+}
+.front {
+     position: absolute;
+     top: 50%;
+     left: 20%;
+     transform: translateZ(3px) scale(0.625);
+}
+h1 {
+    font-size: 50px;
+}
