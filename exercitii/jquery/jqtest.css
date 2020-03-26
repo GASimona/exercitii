@@ -1,0 +1,10 @@
+div {
+    background-color: cadetblue;
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 10px;
+}
+
