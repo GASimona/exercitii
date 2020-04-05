@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="hello.js" defer></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <hello></hello>
+        <span v-if="show" v-bind:title="titlu">{{message}}</span>
+
+        <ol>
+            <li v-for="todo in todos">
+                {{todo}}
+            </li>
+        </ol>
+
+        <button v-on:click="reverse"> Reverse message</button>
+
+        <input type="text" v-model="message">
+    </div>
+</body>
+
+</html>
