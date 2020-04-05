@@ -25,6 +25,8 @@ var myNationalCar = new Car("Dacia", "Logan", 2020, "white", 170);
 myNationalCar.drive(100);
 
 
+
+
 /* 
 var myCar = {
     make: "Ford",
