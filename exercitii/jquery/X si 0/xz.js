@@ -47,11 +47,12 @@ function checkComplete(cells) {
         win = 1;
         console.log(win);
     }
-    else {
-        if (complet <= 0) {
-            $('.remiza').addClass('visible');
-        }
+
+    if ((complet == 0) && (win == 0)) {
+        $('.remiza').addClass('visible');
+        
     }
+
 }
 $('.buttonRemiza').click(replay);
 
@@ -63,7 +64,9 @@ function replay() {
     $('.end').removeClass('visible');
     $('.remiza').removeClass('visible');
 
+
     $('.table div').text('')
-        .removeClass('z x')
+        .removeAttr('class')
+        .unbind('click', makeMove)
         .bind('click', makeMove);
 }
