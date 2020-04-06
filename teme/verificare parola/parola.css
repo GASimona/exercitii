@@ -1,0 +1,12 @@
+input {
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+span {
+    display: inline-block;
+    width: 3em;
+    height: 1em;
+    border: 1px solid black;
+}
