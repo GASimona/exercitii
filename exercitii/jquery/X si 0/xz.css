@@ -11,6 +11,21 @@ body {
     font-family: 'Baloo 2';
     font-size: 4em;
 }
+
+.win {
+    display: flex;
+    justify-content: space-between;
+}
+
+.win0 {
+    font-size: 0.5em;
+    padding-left: 4em;
+}
+.winX {
+    font-size: 0.5em;
+    padding-right: 4em;
+}
+
 .table {
     display: grid;
     grid-template-columns: 2em 2em 2em;
@@ -50,6 +65,10 @@ body {
 
 .end, .remiza {
     visibility: hidden;
+}
+.remiza {
+    position: relative;
+    top: -1.5em;
 }
 
 .visible {
