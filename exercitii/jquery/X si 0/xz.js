@@ -1,14 +1,22 @@
 var activePlayer = 'X';
+var win = 0;
+var complet = 9;
 
 $('.table div').click(makeMove);
 
 function makeMove() {
-    $(this).text(activePlayer)
-        .addClass(activePlayer == 'X' ? 'x' : 'z')
-        .unbind('click', makeMove);
+    if (win == 0) {
+        complet = complet - 1;
+        console.log(complet);
+        console.log(win);
+        $(this).text(activePlayer)
+            .addClass(activePlayer == 'X' ? 'x' : 'z')
+            .unbind('click', makeMove);
 
-    activePlayer = (activePlayer == 'X') ? '0' : 'X';
-    checkEndGame();
+        activePlayer = (activePlayer == 'X') ? '0' : 'X';
+        checkEndGame();
+
+    }
 }
 
 function checkEndGame() {
@@ -33,8 +41,29 @@ function checkEndGame() {
  */
 function checkComplete(cells) {
     if (cells.every(cell => $(cell).text() == 'X')
-        || cells.every(cell => $(cell).text() == '0')
+        || cells.every(cell => $(cell).text() == '0') && (complet != 0)
     ) {
         $('.end').addClass('visible');
+        win = 1;
+        console.log(win);
     }
+    else {
+        if (complet <= 0) {
+            $('.remiza').addClass('visible');
+        }
+    }
+}
+$('.buttonRemiza').click(replay);
+
+function replay() {
+    activePlayer = 'X';
+    win = 0;
+    complet = 9;
+
+    $('.end').removeClass('visible');
+    $('.remiza').removeClass('visible');
+
+    $('.table div').text('')
+        .removeClass('z x')
+        .bind('click', makeMove);
 }
