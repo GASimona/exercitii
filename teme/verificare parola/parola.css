@@ -10,3 +10,19 @@ span {
     height: 1em;
     border: 1px solid black;
 }
+
+.unu {
+    background-color: red;
+}
+.doi {
+    background-color: orange;
+}
+.trei {
+    background-color: yellow;
+}
+.patru {
+    background-color: yellowgreen;
+}
+.cinci {
+    background-color: green;
+}
