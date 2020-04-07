@@ -1,28 +1,27 @@
 var myPassword;
 var arryPassword;
-var conditii;
+var conditii = 0;
 
 function verificareParola() {
     myPassword = document.getElementById('password').value;
     console.log(myPassword);
 
-    // if (verificareCifra()) {
-    //     console.log('Cifra');
-    // }
-    // if (verificareLiteraMare()) {
-    //     console.log('Mare');
-    // }
-    // if (verificareLiteraMica()) {
-    //     console.log('Mica');
-    // }
-    // if (verificareCaracterSpecial()) {
-    //     console.log('Caracter');
-    // }
-    // if (verificareLunigime()) {
-    //     console.log('Lungime');
-    // }
-
-    console.log(verificareCifra() + verificareLiteraMare() + verificareLiteraMica() + verificareCaracterSpecial() + verificareLunigime());
+    if (verificareCifra()) {
+        conditii += 1;
+    }
+    if (verificareLiteraMare()) {
+        conditii += 1;
+    }
+    if (verificareLiteraMica()) {
+        conditii += 1;
+    }
+    if (verificareCaracterSpecial()) {
+        conditii += 1;
+    }
+    if (verificareLunigime()) {
+        conditii += 1;
+    }
+    console.log(conditii);
 }
 
 function verificareCifra() {
