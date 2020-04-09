@@ -10,43 +10,24 @@ body {
     justify-content: center;
     font-family: 'Baloo 2';
     font-size: 4em;
+    height: 100vh;
 }
-
-.win {
-    display: flex;
-    justify-content: space-between;
-}
-
-.win0 {
-    font-size: 0.5em;
-    padding-left: 4em;
-}
-.winX {
-    font-size: 0.5em;
-    padding-right: 4em;
-}
-
 .table {
     display: grid;
     grid-template-columns: 2em 2em 2em;
     grid-template-rows: 2em 2em 2em;
-    font-size: 1.4em;
-    --border: 3px solid chocolate;
+    --border: 3px solid orange;
 }
 .table div {
     text-align: center;
     font-size: 1.5em;
     user-select: none;
 }
-
-.table div:nth-child(1), 
-.table div:nth-child(3), 
-.table div:nth-child(4), 
-.table div:nth-child(6)  {
+.table div:nth-child(1), .table div:nth-child(3), 
+.table div:nth-child(4), .table div:nth-child(6) {
     border-bottom: var(--border);
 }
-.table div:nth-child(2),
-.table div:nth-child(5) {
+.table div:nth-child(2), .table div:nth-child(5) {
     border-left: var(--border);
     border-right: var(--border);
     border-bottom: var(--border);
@@ -55,32 +36,15 @@ body {
     border-left: var(--border);
     border-right: var(--border);
 }
-
 .x {
-    color: darkgreen;
+    color: lightseagreen;
 }
 .z {
-    color: darkorange;
+    color: orangered;
 }
-
-.end, .remiza {
+.end {
     visibility: hidden;
 }
-.remiza {
-    position: relative;
-    top: -1.5em;
-}
-
 .visible {
     visibility: visible;
-}
-
-.buttonRemiza {
-    padding: 0.3em;
-    font-size: 0.5em;
-    position: relative;
-    top: -0.3em;
-    border: 3px solid chocolate;
-    border-radius: 1em;
-    margin-left: 3em;
 }
