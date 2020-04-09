@@ -2,7 +2,7 @@ changeJoke();
 
 function changeJoke() {
     $.getJSON(
-        "http://api.icndb.com/jokes/random",
+        "https://api.icndb.com/jokes/random",
         function (data) {
             $('#fact').html(data.value.joke);
         }
