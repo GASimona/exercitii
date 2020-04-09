@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>Parola:</header>
+    <header>Conditii parola:</header>
     <ol>
         <li>- o litera mica</li>
         <li>- o litera mare</li>
@@ -20,16 +20,12 @@
         <li>- 8 caractere</li>
     </ol>
 
-    <input type="password" id="password">
-    <input type="button" onclick="verificareParola()" value="Submit">
-
-    <div>
-        <span class="unu"></span>
-        <span class="doi"></span>
-        <span class="trei"></span>
-        <span class="patru"></span>
-        <span class="cinci"></span>
-    </div>
+    <input type="password" id="password" oninput="verificareParola()">
+    <meter id="valoarePutere" min="0" max="5" value="0"></meter>
+<!-- 
+    <div>putere parola =
+        <span id="valoare">0</span>
+    </div> -->
 
 </body>
 

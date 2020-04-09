@@ -1,51 +1,39 @@
 var myPassword;
-var arryPassword;
-var conditii = 0;
 
 function verificareParola() {
     myPassword = document.getElementById('password').value;
     console.log(myPassword);
 
-    if (verificareCifra()) {
-        conditii += 1;
-    }
-    if (verificareLiteraMare()) {
-        conditii += 1;
-    }
-    if (verificareLiteraMica()) {
-        conditii += 1;
-    }
-    if (verificareCaracterSpecial()) {
-        conditii += 1;
-    }
-    if (verificareLunigime()) {
-        conditii += 1;
-    }
-    console.log(conditii);
+    document.getElementById('valoarePutere').value = verificareCifra() + verificareLiteraMica() + verificareLiteraMare() + verificareCaracterSpecial() + verificareLunigime();;
 }
 
 function verificareCifra() {
-    if (myPassword.match(/[0-9]/g) != null) {
-        return true;
+    if (myPassword.match(/[0-9]/) != null) {
+        return 1;
     }
+    return 0;
 }
 function verificareLiteraMica() {
-    if (myPassword.match(/[a-z]/g) != null) {
-        return true;
+    if (myPassword.match(/[a-z]/) != null) {
+        return 1;
     }
+    return 0;
 }
 function verificareLiteraMare() {
-    if (myPassword.match(/[A-Z]/g) != null) {
-        return true;
+    if (myPassword.match(/[A-Z]/) != null) {
+        return 1;
     }
+    return 0;
 }
 function verificareCaracterSpecial() {
-    if (myPassword.match(/[^0-9]/g) != null) {
-        return true;
+    if (myPassword.match(/[^a-zA-Z0-9]/) != null) {
+        return 1;
     }
+    return 0;
 }
 function verificareLunigime() {
     if (myPassword.length >= 8) {
-        return true;
+        return 1;
     }
+    return 0;
 }
