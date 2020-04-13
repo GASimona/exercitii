@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Price</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="bitcoin.js"></script>
+
+    <link rel="stylesheet" href="bitcoin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Bitcoin Price Index</h1>
+            <ol>
+                <li>
+                    United States Dollar:
+                    <span id="rateUSD">loading...</span>
+                </li>
+                <li>
+                    British Pound Sterling:
+                    <span id="rateGBP">loading...</span>
+                </li>
+                <li>
+                    Euro:
+                    <span id="rateEUR">loading...</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <button onclick="refresh()">Refresh</button>
+</body>
+
+</html>

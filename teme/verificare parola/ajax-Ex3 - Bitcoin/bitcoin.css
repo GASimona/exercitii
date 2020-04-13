@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(127, 141, 133);
+}
+.container {
+    display: flex; 
+    justify-content: center;
+}
+.content {
+    margin-top: 1em;
+    border-radius: 0.25em;
+    background-color: rgb(47, 36, 44);
+    padding: 2em;
+    color: white;
+}
+h1 {
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 1em;
+}
+li {
+    color: rgb(136, 140, 138);
+    list-style-type: none;
+}
+span {
+    color: white;
+}
+button {
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    position: relative;
+    left: 46%;
+    top: 1em;
+}
