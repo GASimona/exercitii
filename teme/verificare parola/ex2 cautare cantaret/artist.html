@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+
+    <script src="artist.js" defer></script>
+    <!-- <script src="https://api.lyrics.ovh/v1/artist/title"></script>
+    <script src="https://private-anon-2155a763ad-lyricsovh.apiary-mock.com/v1/artist/title"></script> -->
+
+    <link rel="stylesheet" href="artist.css">
+</head>
+<body>
+    <span>Artist:</span>
+    <input type="text">
+    <span>Song:</span>
+    <input type="text">
+
+    <button onclick="cauta()">Search</button>
+
+    <div id="app"></div>
+
+    <!-- <p class="exist">This artist/song exists</p>
+    <p class="noExist">No song/artist found</p> -->
+</body>
+</html>
