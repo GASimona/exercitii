@@ -15,14 +15,19 @@
         <!-- <span class="{{myclass}}"></span> ---------- asa nu -->
 
         <!-- ---- asa da, preluam o clasa din JS "v-bind:class=""------ -->
-        <span v-bind:class="myclass"></span>  
-        <span v-bind:class="counter > 10? ' mare' : 'mic' "></span>  
-        <span :class="myclass"></span>  
+        <span v-bind:class="myclass"></span>
+        <span v-bind:class="counter > 10? ' mare' : 'mic' "></span>
+        <span :class="myclass"></span>
 
         {{ message + ' Yes I do.' }}
         {{ 'counter is ' + counter + 1 + ' , '}}
         {{ ' counter is ' + (counter + 1) }}
-        {{ message.split('').reverse().join('') }}
+        <!-- {{ message.split('').reverse().join('') }} -->
+
+        {{ reversedMessage }} 
+        <!-- {{ reversedMessage() }}  -->
+        <!-- ------ nu merge ... de ce ????? -->
+
         {{ counter > 10? ' mare' : 'mic' }}
         <!-- ---- asa nu -->
         <!-- {{ <span>counter</span> }} -->
