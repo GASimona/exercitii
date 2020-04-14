@@ -23,9 +23,23 @@ class Student extends Person {
         console.log(`Hello my name is ${this.name} and I like ${this.course}`);
     }
 }
+// "super" reprezinta parintele
+class Teacher extends Person {
+    constructor(name, age, height, specialty) {
+        super(name, age, height);
+        this.specialty = specialty;
+    }
+    sayHello() {
+        // aplelam metoda "sayHello" din parinte
+        super.sayHello();
+        console.log(`I'm a teacher and I teach ${this.specialty}`);
+    }
+}
 
 var radu = new Person("Radu", 33, 170);
 var andrea = new Student("Andrea", 26, 168, "Java Script");
+var ion = new Teacher("Ion", 40, 182, "Vue.JS");
 
 radu.sayHello();
 andrea.sayHello();
+ion.sayHello();
