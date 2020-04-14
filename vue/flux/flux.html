@@ -22,14 +22,23 @@
         Sometimes you are lucky
     </div>
 
-    <!-- ------- le afiseaza pe toate------- -->
+    <!-- ------- le afiseaza pe toate------------------------- -->
     <div v-if="hour() < 5">Vise placute!</div>
     <div v-else-if="hour() < 11">Buna dimineata!</div>
     <div v-else-if="hour() < 18">Buna ziua!</div>
     <div v-else>Buna seara!</div>
 
-    <!-- ------- se afiseaza si pe true----- -->
+    <!-- ------- se afiseaza si pe true--------------------- -->
     <h1 v-show="good">Java Script is beautiful</h1>
+
+    <!-- ----- nu afiseaza lista--------------------------------- -->
+    <ul>
+        <li v-for="(message, index) in todo" id="index">
+            {{ index }} - {{message }}
+        </li>
+    </ul>
+
+    <button v-on:click="addNewItem()">Add new todo</button>
 </body>
 
 </html>
