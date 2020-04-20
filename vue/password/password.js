@@ -6,7 +6,7 @@ var app = new Vue({
     },
     computed: {
         score() {
-            newScore = [
+            score = [
                 this.hasSmallLetter,
                 this.hasUpperLetter,
                 this.hasDigit,
