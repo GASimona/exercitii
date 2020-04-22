@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <script src="blog.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.common.dev.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <hello text="Welcome to my site!"></hello>
+        <button-counter @counter-clicked="doSomething($event)"></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+</body>
+</html>
