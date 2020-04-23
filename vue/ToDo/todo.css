@@ -84,8 +84,7 @@ input[type="text"] {
 
 .controls div {
     border-radius: 0.1em;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.3em;
     padding: 0.1em;
     color: white;
     text-align: center;
@@ -103,4 +102,10 @@ input[type="text"] {
 .task.done .title {
     color: #888;
     text-decoration: line-through;
+}
+
+.filters {
+    text-align: right;
+    margin-bottom: 0.5em;
+
 }
