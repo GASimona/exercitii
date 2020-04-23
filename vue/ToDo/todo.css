@@ -8,6 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: gray;
 }
 
 #app {
@@ -21,7 +22,7 @@ body {
 }
 h1 {
     margin-bottom: 0.5em;
-    font-size: 1.8;
+    font-size: 1.8em;
 }
 
 li {
@@ -42,6 +43,7 @@ li:last-child {
 
 .new_task {
     margin-top: 1em;
+    text-align: right;
 }
 .new_task_input{
     display: flex;
@@ -70,4 +72,35 @@ input[type="text"] {
     padding: 0.5em;
     width: 80%;
     margin-left:  0.5em;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+.controls {
+    display: flex;
+}
+
+.controls div {
+    border-radius: 0.1em;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.1em;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 0.2em;
+}
+.check {
+    background-color: rgb(57, 175, 110);
+}
+.delete {
+    background-color: rgb(228, 107, 107);
+}
+
+.task.done .title {
+    color: #888;
+    text-decoration: line-through;
 }

@@ -17,17 +17,20 @@
     <div id="app">
         <h1>To Do:</h1>
         <ul>
-            <li v-for="todo in todos">
-                {{ todo }}
-            </li>
+            <task 
+                v-for="(todo, index) in todos" 
+                :title="todo.title" 
+                :is-done="todo.isDone"
+                @checked="checkTodo(index)"
+                @deleted="deletedTodo(index)">
+            </task>
         </ul>
         <div class="new_task">
             <!-- <div class="new_task_input"> -->
-                Task
-                <input type="text" v-model="task" @keyup.enter="saveItem">
-            </input>
+            Task
+            <input type="text" v-model="task" @keyup.enter="saveTodo"></input>
             <div class="save_task">
-                <button @click="saveItem">Save Item</button>
+                <button @click="saveTodo">Save To Do</button>
             </div>
         </div>
     </div>
