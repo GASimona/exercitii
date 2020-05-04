@@ -23,60 +23,57 @@ body {
 h1 {
     margin-bottom: 0.5em;
     font-size: 1.8em;
+    text-align: center;
+    color: gray;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
 }
 
 li {
     list-style: none;
-    background-color: white;
-    border: 1px solid #e0e0e0;
     padding: 0.5em;
-}
-
-li:first-child {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-li:last-child {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    color: rgb(128, 128, 128);
 }
 
 .new_task {
     margin-top: 1em;
-    text-align: right;
-}
-.new_task_input{
-    display: flex;
-    justify-content: flex-end;
+    text-align: left;
+    color: rgb(128, 128, 128);
 }
 .save_task {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 0.5em;
 }
 
 button {
-    font-size: 1em;
-    border:1px solid rgb(73, 73, 236);
-    border-radius: 5px;
-    background-color: rgb(41, 103, 139);
-    color: white;
-    padding: 0.5em;
-    margin-top: 1em;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: #f5f5f5;
+    color: rgb(122, 174, 204);
 }
+
 input[type="text"] {
     font-size: 1em;
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
     padding: 0.5em;
-    width: 80%;
+    width: 90%;
     margin-left:  0.5em;
+    color: rgb(128, 128, 128);
 }
+
+input[type="text"]:focus {
+    outline: none;
+  }
 
 .task {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 0;
+
 }
 .controls {
     display: flex;
@@ -92,30 +89,30 @@ input[type="text"] {
     user-select: none;
     margin-left: 0.2em;
 }
-.check {
-    background-color: rgb(57, 175, 110);
-}
-.delete {
-    background-color: rgb(228, 107, 107);
+
+.material-icons {
+    color: gray;
+    opacity: 0.7;
 }
 
 .task.done .title {
-    color: #888;
+    color: rgb(128, 128, 128, 0.5);
     text-decoration: line-through;
 }
 
 .filters {
     text-align: right;
     margin-bottom: 0.5em;
-
+    color: rgb(128, 128, 128);
 }
 .color_and_title {
     display: flex;
 }
 .color {
     width: 0.5em;
-    height: 1em;
+    height: 1.5em;
     opacity: 0.6;
     border-radius: 0.2em;
     padding-right: 0.5em;
+    margin-right: 0.5em;
 }

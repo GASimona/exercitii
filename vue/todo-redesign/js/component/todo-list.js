@@ -18,10 +18,12 @@ Vue.component('todo-list', {
                     </task>
                 </ul>
                 <div class="new_task">
-                    Task
+                    New:
                     <input type="text" v-model="task" @keyup.enter="saveTodo"></input>
                     <div class="save_task">
-                        <button @click="saveTodo">Save To Do</button>
+                        <button @click="saveTodo">
+                            <i class="fa fa-plus-circle" style="font-size:36px"></i>
+                        </button>
                     </div>
                 </div>
             </div>
