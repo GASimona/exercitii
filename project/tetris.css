@@ -1,0 +1,16 @@
+td, tr {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.screen, .control {
+    width: 60%;
+    border: 2px solid seagreen;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.board  {
+    margin-right: 3em;
+}
