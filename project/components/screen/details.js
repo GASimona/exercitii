@@ -1,9 +1,9 @@
 Vue.component('game-details', {
     template: `
         <div class="details">
-            <div class="nextPiece">
+            <div >
                 <p>NEXT</p>
-                <table>
+                <table class="nextPiece">
                     <tr v-for="line of lines">
                         <td v-for="column of columns"></td>
                     </tr>
