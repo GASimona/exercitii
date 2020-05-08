@@ -1,5 +1,6 @@
 import { Hero } from './hero.js';
 
+// export default class Mage extends Hero { varianta scurta
 class Mage extends Hero {
     firePrimary(anotherHero) {
         this.mana -= 20;
@@ -17,4 +18,5 @@ class Mage extends Hero {
     }
 }
 
+// export default Mage
 export { Mage }

@@ -7,6 +7,7 @@
 // import { Superman as HeroSuperman} from './superman.js';
 
 import { Superman } from './superman.js';
+// import Mage from './mage.js';
 import { Mage } from './mage.js';
 
 // var clark = new SupermanModule.Superman("Clark Kent", 1000, 1000);
