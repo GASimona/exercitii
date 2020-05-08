@@ -16,4 +16,4 @@ class Superman extends Hero {
     }
 }
 
-export { Supermen }
+export { Superman }
