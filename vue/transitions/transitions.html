@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="transitions.css">
+    <script type="module" src="transitions.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <transition name="fade" appear>
+            <div v-if="show">Now you see me</div>
+        </transition>
+        <transition name="bounce" appear>
+            <div v-if="show">Now you see me</div>
+        </transition>
+        <transition name="switch">
+            <button v-if="">On</button>
+            <button>Off</button>
+        </transition>
+        <input type="button" value="Press me" @click="show = !show">
+    </div>
+</body>
+
+</html>
