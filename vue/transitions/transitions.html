@@ -18,11 +18,19 @@
         <transition name="bounce" appear>
             <div v-if="show">Now you see me</div>
         </transition>
-        <transition name="switch">
-            <button v-if="">On</button>
-            <button>Off</button>
+        <transition name="fade" mode="out-in">
+            <button v-if="isOn" @click="isOn = !isOn" key="on">On</button>
+            <button v-else  @click="isOn = !isOn" key="off">Off</button>
         </transition>
         <input type="button" value="Press me" @click="show = !show">
+
+        <transition-group name="fade" tag="ul">
+            <span v-for="number in numbers" :key="number">
+                {{ number }}
+            </span>
+        </transition-group>
+        <input type="button" value="Add" @click="add">
+        <input type="button" value="Remove" @click="remove">
     </div>
 </body>
 
