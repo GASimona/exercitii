@@ -14,6 +14,7 @@ class Question {
         this.answers = answers
         this.correctAnswer = correctAnswer
         this.answer = null
+        this.shuffleAnswers()
     }
     giveAnswer(answer) {
         this.answer = answer
@@ -29,6 +30,11 @@ class Question {
     }
     isSelectedAnswer(answer) {
         return this.answer == answer
+    }
+    shuffleAnswers() {
+        this.answers.sort(function() {
+            return 0.5 - Math.random();
+        });
     }
 }
 
@@ -50,6 +56,11 @@ class Quiz {
         } else {
             this.activeQuestion++
         }
+    }
+    back() {
+        if (this.activeQuestion > 0) {
+            this.activeQuestion--
+        }  
     }
     isLastQuestion() {
         return this.activeQuestion == this.questions.length - 1
@@ -107,7 +118,8 @@ const store = new Vuex.Store({
     },
     mutations: {
         answerQuestion: (state, answer) => state.quiz.answerQuestion(answer),
-        next: (state) => state.quiz.next()
+        next: (state) => state.quiz.next(),
+        back: (state) => state.quiz.back()
     },
     getters: {
         activeQuestion: (state) => state.quiz.getActiveQuestion(),
@@ -123,23 +135,25 @@ const quiz = {
                 Scorul tau este: {{ quizScore }}
             </div>
             <div v-else>
-                <p> {{ activeQuestion.text }} </p>
+                <p> {{ activeQuestion.text }} </p> 
                 <ol>
-                    <li v-for="(answer, index) in activeQuestion.answers"
-                        :key="index" 
-                        @click="answerQuestion(index)"
-                        :class="{ selected : activeQuestion.isSelectedAnswer(index) }"
+                    <li v-for="(answer) in activeQuestion.answers"
+                        :key="answer.id" 
+                        @click="answerQuestion(answer.id)"
+                        :class="{ selected : activeQuestion.isSelectedAnswer(answer.id) }"
                     >
-                    {{ answer }}
+                    {{ answer.text }}
                     </li>
                 </ol>
+                <input type="button" @click="back" value="Back"></input>
                 <input type="button" @click="next" value="Next"></input>
             </div>
         </div>
     `,
     methods: {
         answerQuestion: (answer) => store.commit('answerQuestion', answer),
-        next: () => store.commit('next')
+        next: () => store.commit('next'),
+        back: () => store.commit('back')
     },
     computed: {
         activeQuestion: () => store.getters.activeQuestion,
