@@ -6,6 +6,8 @@ new Promise((resolve, reject) => {
             reject('Fals')
         }
     })
+    //dupa ce promisiunea se indeplineste intra pe then si executa ce este in el
+    // pe then vine raspunsul
     .then (afiseazaRezultatul => {
         console.log(afiseazaRezultatul)
     })
