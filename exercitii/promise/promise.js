@@ -12,17 +12,20 @@
 
 new Promise((resolve, reject) => {
             setTimeout( () => resolve('unu'), 3000) 
-        }).then(result => {
+        })
+        .then(result => {
             addDiv(result);
             return new Promise((resolve, reject) => {
                 setTimeout( () => resolve('doi'), 2000);
             });
-        }).then(result => {
+        })
+        .then(result => {
              addDiv(result);
              return new Promise((resolve, reject) => {
                 setTimeout( () => resolve('trei'), 1000);
             });
-        }).then(result => {
+        })
+        .then(result => {
              addDiv(result);
         });         
 
