@@ -61,9 +61,61 @@ class Session {
         this.loggedUser = null
     }
     login(email, password) {
-        if (this.users.userExists(email)) {
-            throw new Error('')
+        if (!this.users.userExists(email)) {
+            throw new Error('Login failed')
         }
-        // nu este terminat
+        let user = this.users.searchUserWithEmail(email)
+        if (!user.login(password)) {
+            throw new Error('Login failed')
+        }
+        this.loggedUser = user
+    }
+    logout() {
+        this.user.logout()
+        this.loggedUser = null
     }
 }
+
+class ProductCatalog {
+    constructor() {
+        this.products = []
+    }
+    addProduct(product) {
+        this.products.push(product)
+    }
+}
+
+class Product {
+    constructor(code, name, price, description, image) {
+        this.code = code
+        this.name = name
+        this.price = price
+        this.description = description
+        this.image = image
+    }
+}
+
+new Vue({
+    el: '#app',
+    data: () => {
+        let users = new Users()
+        users.add(new User('admin', 'test123'))
+        let session = new Session(this.users)
+        let catalog = new ProductCatalog()
+        catalog.add(new Product(1, 'VueJS Basic', 0, 'https://commons.wikimedia.org/wiki/File:Vue.js_Logo_2.svg'))
+        catalog.add(new Product(2, 'VueJS Intermediate', 10, 'https://commons.wikimedia.org/wiki/File:Vue.js_Logo_2.svg'))
+        catalog.add(new Product(3, 'VueJS Advanced', 20, 'https://commons.wikimedia.org/wiki/File:Vue.js_Logo_2.svg'))    
+        return {
+            users,
+            session,
+            catalog
+        }
+    },
+    template: ``,
+    methods: {
+        
+    },
+    computed: {
+        
+    },
+})
