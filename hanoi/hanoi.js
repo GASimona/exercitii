@@ -67,8 +67,7 @@ class Game {
     makeMove(move) {
         let sourceRod = this.rods[move.sourceRodId]
         let targetRod = this.rods[move.targetRodId]
-
-        if(!targetRod.canPutDisk(sourceRod.topDosk())) {
+        if(!targetRod.canPutDisk(sourceRod.topDisk())) {
             throw new Error('Cannot move disk')
         }
         let disk = sourceRod.pop()
@@ -78,7 +77,7 @@ class Game {
 
 const store = new Vuex.Store({
     state: {
-        game: new Game(4)
+        game: new Game(5)
     },
     mutations: {
         makeMove: (state, move) => state.game.makeMove(move)
@@ -92,9 +91,10 @@ const rod = {
     props: ['rod'],
     template: `
         <div class="rod"
-             :style="{ height: disksHeight(rod.size),
-                       width: diskWidth(rod.size)
-              }"    
+             :style="{ height: disksHeight(rod.size), width: diskWidth(rod.size) }" 
+             @dragover.prevent
+             @dragenter.prevent
+             @drop="drop($event, rod)"
         >
             <div v-for="disk in rod.disks"
                  :key="disk.size"
@@ -104,6 +104,8 @@ const rod = {
                      width: diskWidth(disk.size),
                      backgroundColor: disk.color
                   }"
+                  draggable="true"
+                  @dragstart="drag($event, rod)"
             >
 
             </div>
@@ -111,7 +113,14 @@ const rod = {
     `,
     methods: {
         disksHeight: (disks) => disks * 2 + 'em',
-        diskWidth: (diskSize) => diskSize * 3 + 'em' 
+        diskWidth: (diskSize) => diskSize * 3 + 'em',
+        drag: (event, dragRod) => {
+            event.dataTransfer.setData("dragRodId", dragRod.id)    
+        },
+        drop: (event, dropRod) => {
+            const dragRodId = event.dataTransfer.getData("dragRodId")
+            store.commit('makeMove', new Move(dragRodId, dropRod.id))
+        }
     },
 }
 
