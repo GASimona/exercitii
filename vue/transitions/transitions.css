@@ -9,15 +9,15 @@
 }
 
 .bounce-enter-active {
-    animation-name: bounce;
+    animation-name: tada;
     animation-duration: 2s;
 }
 .bounce-live-active {
-    animation-name: bounce;
+    animation-name: tada;
     animation-duration: 2s;
     animation-direction: reverse;
 }
-@keyframes bounce {
+/* @keyframes bounce {
     0% {
         transform: scale(0);
     }
@@ -27,4 +27,4 @@
     100% {
         transform: scale(1);
     }
-}
+} */
