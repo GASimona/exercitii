@@ -23,7 +23,7 @@ con.connect( (err) => {
 app.post("/contact", (req, res) => {
     console.log(req.body)
     con.query(`INSERT INTO conctact VALUES (NULL, '${req.body.name}', '${req.body.email}', '${req.body.message}')`)
-    // dam raspuns
+    // dam raspuns 200 ok
     res.sendStatus(200)
 })
 
