@@ -7,6 +7,7 @@ const uri = `http://localhost:${port}`
 const app = express()
 app.use(bodyParse.urlencoded({extended: true}))
 
+
 var con = mysql.createConnection({
     host: "localhost",
     user: "myuser",
@@ -22,7 +23,18 @@ con.connect( (err) => {
 // inregistreaza rutele
 app.post("/contact", (req, res) => {
     console.log(req.body)
-    con.query(`INSERT INTO conctact VALUES (NULL, '${req.body.name}', '${req.body.email}', '${req.body.message}')`)
+    con.query("INSERT INTO contact VALUES(NULL, ?, ?, ?)",
+    [
+        req.body.name,
+        req.body.email,
+        req.body.message
+    ]);
+
+
+            // VALUES(NULL, '${req.body.name}', '${req.body.email}','${req.body.message}') `)
+            // '${req.body.message}'
+            // 'test'); DELETE FROM contact; -- ')
+
     // dam raspuns 200 ok
     res.sendStatus(200)
 })
